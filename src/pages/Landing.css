@@ -1,0 +1,170 @@
+/* ============================================
+   LANDING PAGE - Immersion cinématographique
+   ============================================ */
+
+.landing-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-bg-light);
+  overflow: hidden;
+}
+
+/* Logo animé - Animation narrative */
+.landing-logo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+  background-color: var(--color-bg-light);
+  transition: opacity 0.8s ease-out 1s, 
+              z-index 0s 1.8s,
+              background-color 0.8s ease-out 1s;
+}
+
+/* État initial : logo prend toute la page - reste coloré 2s */
+.landing-logo-container.logo-intro {
+  opacity: 1;
+  z-index: 10;
+  background-color: var(--color-bg-light);
+}
+
+/* État final : logo en arrière-plan - opacité baisse après 2s */
+.landing-logo-container.logo-to-background {
+  opacity: 0.1;
+  z-index: 0;
+  background-color: transparent;
+  animation: logoRotate 20s linear infinite;
+}
+
+.landing-logo {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 300px;
+  font-weight: 700;
+  color: var(--color-accent-primary);
+  transition: width var(--transition-slow),
+              height var(--transition-slow),
+              font-size var(--transition-slow);
+}
+
+/* Animation d'entrée du logo */
+.landing-logo-container.logo-intro .landing-logo {
+  animation: logoIntro 2.9s ease-out;
+}
+
+/* Réduction du logo quand il passe en arrière-plan */
+.landing-logo-container.logo-to-background .landing-logo {
+  width: 300px;
+  height: 300px;
+  font-size: 200px;
+}
+
+@keyframes logoIntro {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(2);
+  }
+}
+
+/* Contenu principal */
+.landing-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  opacity: 1;
+  animation: fadeInUp 1.5s ease-out 2.5s both;
+}
+
+.landing-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(48px, 8vw, 64px);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.landing-subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+/* Liens sociaux */
+.landing-social-links {
+  margin: 2rem 0 1rem 0;
+  animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.landing-button {
+  margin-top: 1rem;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Animation narrative : scission lors de la transition */
+.landing-container.exiting {
+  animation: none;
+}
+
+.landing-container.exiting::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  background-color: var(--color-bg-light);
+  z-index: 10;
+  animation: splitUp 1.9s ease-in-out forwards;
+}
+
+.landing-container.exiting::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-light);
+  z-index: 10;
+  animation: splitDown 1.9s ease-in-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing-logo {
+    width: 200px;
+    height: 200px;
+    font-size: 120px;
+  }
+  
+  .landing-content {
+    padding: 1rem;
+  }
+}

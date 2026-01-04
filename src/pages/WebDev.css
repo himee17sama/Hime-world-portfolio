@@ -1,0 +1,158 @@
+/* ============================================
+   UNIVERS WEB DEVELOPMENT
+   Ambiance : Sobre, Technique, Élégante
+   Couleurs : Nude très clair, Rose poudré, Gris doux
+   ============================================ */
+
+/* src/pages/WebDev.css */
+
+.webdev-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #FFF6F5; /* Beige très clair */
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Filigrane "EN CONSTRUCTION" */
+  .webdev-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 15vw, 10rem);
+    font-weight: 700;
+    color: rgba(220, 20, 60, 0.2); /* Rouge avec opacité réduite */
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  .webdev-title {
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333333;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .webdev-text {
+    position: relative;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    color: #7D7D7D;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    animation: fadeIn 1.2s ease-in;
+  }
+  
+  .webdev-projects {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .webdev-card {
+    background-color: #FFF9F8; /* Blanc cassé */
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .webdev-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* LIENS SOCIAUX */
+  .webdev-social {
+    margin: 2rem 0;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+  }
+
+  .webdev-social .social-link {
+    background-color: var(--color-accent-primary); /* Rose poudré */
+    color: var(--color-text-primary);
+  }
+
+  .webdev-social .social-link:hover {
+    background-color: #8E8E8E; /* Gris doux */
+    box-shadow: 0 4px 12px rgba(142, 142, 142, 0.4);
+  }
+
+  /* NAVIGATION BUTTON - Retour seulement */
+  .webdev-navigation {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    z-index: 100;
+    pointer-events: none;
+  }
+  
+  .webdev-navigation button {
+    pointer-events: all;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform var(--transition-normal),
+                background-color var(--transition-normal);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+  }
+  
+  .webdev-btn-back {
+    background-color: var(--color-accent-primary); /* Rose poudré */
+    color: var(--color-text-primary);
+  }
+  
+  .webdev-btn-back:hover {
+    transform: scale(1.05);
+    background-color: var(--color-accent-secondary); /* Violet pâle */
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .webdev-navigation {
+      padding: 0 1rem;
+      bottom: 1.5rem;
+    }
+    
+    .webdev-navigation button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  

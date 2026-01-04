@@ -1,0 +1,108 @@
+.illus-container {
+    min-height: 100vh;
+    background-color: #FFF5EE;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .illus-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #D9886A;
+    margin-bottom: 1.5rem;
+  }
+  
+  .illus-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #7D7D7D;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+  
+  .illus-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .illus-card {
+    background-color: #FDF0E6;
+    padding: 2rem;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .illus-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #D9886A;
+    margin-bottom: 0.5rem;
+  }
+
+  .illus-client {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #D9886A;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .illus-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #7D7D7D;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Container pour l'image */
+  .illus-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+
+  .illus-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+  }
+  
+  .illus-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #D9886A;
+    font-weight: 500;
+  }
+  
+  .illus-navigation {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .illus-navigation button {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background-color: #E8B89C;
+    color: #333;
+    font-family: var(--font-body);
+    cursor: pointer;
+  }

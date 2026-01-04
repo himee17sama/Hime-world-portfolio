@@ -1,0 +1,202 @@
+/* ============================================
+   UNIVERS "QUI SUIS-JE ?"
+   Palette principale (neutre)
+   ============================================ */
+
+   .about-container {
+    min-height: 100vh;
+    background-color: var(--color-bg-light);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* INTRO */
+  .about-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .about-text {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .about-text h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(40px, 6vw, 56px);
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+  
+  .about-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .about-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    padding-left: 30px;
+    border-left: 3px solid var(--color-accent-light);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+  .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+  .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+  .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+  .timeline-item:nth-child(5) { animation-delay: 1s; }
+  .timeline-item:nth-child(6) { animation-delay: 1.2s; }
+  
+  .timeline-circle {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-accent-dark);
+    border-radius: 50%;
+    border: 3px solid var(--color-accent-light);
+  }
+  
+  .timeline-content {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-year {
+    font-weight: 700;
+    color: var(--color-accent-light);
+    font-size: 1rem;
+  }
+  
+  .timeline-title {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+    color: var(--color-text-primary);
+  }
+  
+  .timeline-description {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+  }
+  
+  /* LIENS SOCIAUX */
+  .about-social {
+    margin: 2rem 0;
+    animation: fadeInUp 0.8s ease-out 1.2s both;
+  }
+
+  .about-social .social-link {
+    background-color: var(--color-accent-primary); /* Rose poudré */
+    color: var(--color-text-primary);
+  }
+
+  .about-social .social-link:hover {
+    background-color: var(--color-accent-secondary); /* Violet pâle */
+    box-shadow: 0 4px 12px rgba(244, 199, 195, 0.4);
+  }
+
+  /* NAVIGATION BUTTONS */
+  .about-navigation {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 100;
+    pointer-events: none;
+  }
+  
+  .about-navigation button {
+    pointer-events: all;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: transform var(--transition-normal),
+                background-color var(--transition-normal);
+    animation: fadeInUp 0.8s ease-out 1.4s both;
+  }
+  
+  .about-btn-back {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+  }
+  
+  .about-btn-back:hover {
+    transform: scale(1.05);
+    background-color: var(--color-accent-secondary);
+  }
+  
+  .about-btn-next {
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+  }
+  
+  .about-btn-next:hover {
+    transform: scale(1.05);
+    background-color: var(--color-accent-secondary);
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-navigation {
+      padding: 0 1rem;
+      bottom: 1.5rem;
+    }
+    
+    .about-navigation button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    
+    .about-btn-next {
+      font-size: 13px;
+    }
+  }
+  

@@ -1,0 +1,130 @@
+.social-container {
+    min-height: 100vh;
+    background-color: #FFF5EE;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .social-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #D9886A;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #7D7D7D;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+  
+  .social-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .social-card {
+    background-color: #FDF0E6;
+    padding: 2rem;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .social-card-full {
+    max-width: 900px;
+  }
+  
+  .social-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #D9886A;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-client {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #D9886A;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  
+  .social-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #7D7D7D;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Grille d'images */
+  .social-images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .social-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #FFF5EE;
+  }
+
+  .social-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .social-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #D9886A;
+    font-weight: 500;
+  }
+  
+  .social-navigation {
+    margin-top: 4rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-navigation button {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background-color: #E8B89C;
+    color: #333;
+    font-family: var(--font-body);
+    cursor: pointer;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .social-images-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .social-images-grid {
+      grid-template-columns: 1fr;
+    }
+  }

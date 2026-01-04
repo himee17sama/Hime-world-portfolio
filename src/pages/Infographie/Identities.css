@@ -1,0 +1,172 @@
+.identites-container {
+    min-height: 100vh;
+    background-color: #FFF5EE;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .identites-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #D9886A;
+    margin-bottom: 1.5rem;
+  }
+  
+  .identites-intro {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #7D7D7D;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+  
+  .identites-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .identites-card {
+    background-color: #FDF0E6;
+    padding: 2rem;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .identites-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #D9886A;
+    margin-bottom: 0.5rem;
+  }
+
+  .identites-client {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #D9886A;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  /* Container pour les logos MTD en ligne */
+  .identites-logos-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+  }
+
+  .identites-logo-square {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .identites-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Container pour le logo unique (boutique cosmétique) */
+  .identites-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+
+  .identites-logo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+  }
+  
+  .identites-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #7D7D7D;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Palette de couleurs */
+  .identites-colors {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(217, 136, 106, 0.2);
+  }
+
+  .identites-colors-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #D9886A;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .identites-colors-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .color-circle:hover {
+    transform: scale(1.1);
+  }
+  
+  .identites-tag {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #D9886A;
+    font-weight: 500;
+  }
+  
+  .identites-navigation {
+    margin-top: 4rem;
+  }
+  
+  .identites-navigation button {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background-color: #E8B89C;
+    color: #333;
+    font-family: var(--font-body);
+    cursor: pointer;
+  }

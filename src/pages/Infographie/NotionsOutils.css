@@ -1,0 +1,97 @@
+.notions-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #FFF5EE;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Filigrane "EN CONSTRUCTION" */
+  .notions-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4rem, 15vw, 8rem);
+    font-weight: 700;
+    color: rgba(220, 20, 60, 0.15); /* Rouge avec opacité réduite */
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  .notions-title {
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #D9886A;
+    margin-bottom: 1.5rem;
+  }
+  
+  .notions-intro {
+    position: relative;
+    z-index: 1;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #7D7D7D;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+  
+  .notions-projects {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .notions-card {
+    position: relative;
+    z-index: 1;
+    background-color: #FDF0E6;
+    padding: 2rem;
+    border-radius: 18px;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+  }
+  
+  .notions-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #D9886A;
+    margin-bottom: 0.8rem;
+  }
+  
+  .notions-card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #7D7D7D;
+    line-height: 1.6;
+  }
+  
+  .notions-navigation {
+    position: relative;
+    z-index: 1;
+    margin-top: 4rem;
+  }
+  
+  .notions-navigation button {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    background-color: #E8B89C;
+    color: #333;
+    font-family: var(--font-body);
+    cursor: pointer;
+  }

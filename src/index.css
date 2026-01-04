@@ -1,0 +1,191 @@
+/* ============================================
+   CHARTE GRAPHIQUE - HIME'S PORTFOLIO
+   ============================================ */
+
+/* Variables CSS - Palette de couleurs */
+:root {
+  /* Palette principale */
+  --color-bg-light: #FFF6F5;
+  --color-bg-alt: #FFF9F8;
+  --color-accent-primary: #F4C7C3; /* Rose poudré - signature */
+  --color-accent-secondary: #C8B6E2; /* Violet pâle */
+  --color-text-primary: #333333;
+  --color-text-secondary: #7D7D7D;
+  
+  /* Menu principal - fond sombre */
+  --color-menu-bg: #1E1A1A;
+  
+  /* Polices */
+  --font-display: 'Playfair Display', serif;
+  --font-heading: 'Raleway', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Transitions */
+  --transition-slow: 0.6s ease;
+  --transition-normal: 0.3s ease;
+  --transition-fast: 0.2s ease;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Typographie */
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(48px, 6vw, 64px);
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: clamp(20px, 2.5vw, 24px);
+  line-height: 1.3;
+  color: var(--color-text-primary);
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.italic-text {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: var(--color-text-secondary);
+}
+
+/* Boutons - Style global */
+button {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 50px; /* Pill shape */
+  border: none;
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: transform var(--transition-normal), 
+              background-color var(--transition-normal);
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: var(--color-accent-secondary);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* Animations narratives */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logoRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes splitUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes splitDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Animation narrative : entrée dans un nouvel univers */
+@keyframes enterFromDark {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp var(--transition-slow) ease-out;
+}
+
+/* Utilitaires */
+.text-center {
+  text-align: center;
+}
