@@ -11,6 +11,7 @@
     min-height: 100vh;
     background-color: #FFF6F5; /* Beige très clair */
     padding: 4rem 2rem;
+    padding-bottom: 8rem; /* Espace pour les boutons de navigation */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,21 +19,6 @@
     overflow: hidden;
   }
 
-  /* Filigrane "EN CONSTRUCTION" */
-  .webdev-watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(4rem, 15vw, 10rem);
-    font-weight: 700;
-    color: rgba(220, 20, 60, 0.2); /* Rouge avec opacité réduite */
-    z-index: 0;
-    pointer-events: none;
-    white-space: nowrap;
-    user-select: none;
-  }
   
   .webdev-title {
     position: relative;
@@ -67,15 +53,130 @@
   
   .webdev-card {
     background-color: #FFF9F8; /* Blanc cassé */
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+  }
+
+  .webdev-card-featured {
+    max-width: 900px;
+    width: 100%;
   }
   
   .webdev-card:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  .webdev-card-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 0.5rem;
+  }
+
+  .webdev-card-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #7D7D7D;
+    margin-bottom: 1.5rem;
+  }
+
+  .webdev-card-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 2rem;
+  }
+
+  .webdev-features {
+    margin-bottom: 2rem;
+  }
+
+  .webdev-features-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
+
+  .webdev-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .webdev-features-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333333;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .webdev-features-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .webdev-tech {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: rgba(244, 199, 195, 0.1);
+    border-radius: 8px;
+  }
+
+  .webdev-tech-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 0.5rem;
+  }
+
+  .webdev-tech-stack {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #7D7D7D;
+    margin: 0;
+  }
+
+  .webdev-link-container {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .webdev-link {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, 
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+  }
+
+  .webdev-link:hover {
+    transform: scale(1.05);
+    background-color: var(--color-accent-secondary);
+    box-shadow: 0 4px 12px rgba(200, 182, 226, 0.4);
   }
   
   @keyframes fadeIn {
@@ -145,6 +246,40 @@
 
   /* Responsive */
   @media (max-width: 768px) {
+    .webdev-container {
+      padding: 2rem 1rem;
+      padding-bottom: 7rem;
+    }
+
+    .webdev-title {
+      font-size: 2rem;
+    }
+
+    .webdev-text {
+      font-size: 1rem;
+    }
+
+    .webdev-card {
+      padding: 1.5rem;
+    }
+
+    .webdev-card-title {
+      font-size: 1.5rem;
+    }
+
+    .webdev-card-subtitle {
+      font-size: 1rem;
+    }
+
+    .webdev-features-title {
+      font-size: 1.1rem;
+    }
+
+    .webdev-link {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
     .webdev-navigation {
       padding: 0 1rem;
       bottom: 1.5rem;

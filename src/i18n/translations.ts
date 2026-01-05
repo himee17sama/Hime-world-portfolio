@@ -88,8 +88,28 @@ export const translations = {
     },
     // WebDev
     webdev: {
-      title: "Web Development",
+      title: "Développement Web",
       intro: "Ici, je présente mes projets de développement web : React, TypeScript, HTML, CSS, JavaScript et plus.",
+      nohera: {
+        title: "Nohera",
+        subtitle: "Application de gestion de bibliothèque personnelle",
+        description: "Nohera est une application web moderne pour suivre et gérer votre bibliothèque personnelle de livres. Créez votre collection, suivez vos lectures en cours, consultez vos statistiques et visualisez votre progression avec des graphiques interactifs.",
+        features: {
+          title: "Fonctionnalités principales",
+          library: "Gestion complète de bibliothèque : ajout, modification et suppression de livres",
+          status: "Suivi des statuts de lecture : en cours, terminé, abandonné",
+          search: "Recherche en temps réel par titre, auteur ou catégorie",
+          stats: "Statistiques détaillées avec graphiques interactifs",
+          tabs: "Organisation par onglets : toutes les lectures, lecture actuelle, ce mois, mois dernier",
+          persistence: "Sauvegarde automatique dans le localStorage"
+        },
+        tech: {
+          title: "Technologies utilisées",
+          stack: "React 19, TypeScript, Vite, LocalStorage, SVG (graphiques natifs)"
+        },
+        link: "Visiter l'application",
+        linkText: "Voir Nohera en ligne →"
+      },
       back: "Retour"
     },
     // Common
@@ -190,6 +210,26 @@ export const translations = {
     webdev: {
       title: "Web Development",
       intro: "Here, I present my web development projects: React, TypeScript, HTML, CSS, JavaScript, and more.",
+      nohera: {
+        title: "Nohera",
+        subtitle: "Personal library management application",
+        description: "Nohera is a modern web application to track and manage your personal book library. Create your collection, track your current readings, view your statistics, and visualize your progress with interactive charts.",
+        features: {
+          title: "Main features",
+          library: "Complete library management: add, modify, and delete books",
+          status: "Reading status tracking: in progress, completed, abandoned",
+          search: "Real-time search by title, author, or category",
+          stats: "Detailed statistics with interactive charts",
+          tabs: "Organization by tabs: all readings, current reading, this month, last month",
+          persistence: "Automatic saving in localStorage"
+        },
+        tech: {
+          title: "Technologies used",
+          stack: "React 19, TypeScript, Vite, LocalStorage, SVG (native charts)"
+        },
+        link: "Visit the application",
+        linkText: "View Nohera online →"
+      },
       back: "Back"
     },
     // Common

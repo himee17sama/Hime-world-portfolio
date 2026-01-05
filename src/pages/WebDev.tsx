@@ -11,20 +11,47 @@ export default function WebDev() {
 
   return (
     <div className="webdev-container">
-      <div className="webdev-watermark">EN CONSTRUCTION</div>
       <h2 className="webdev-title">{t("webdev.title")}</h2>
       <p className="webdev-text">
         {t("webdev.intro")}
       </p>
       <div className="webdev-projects">
-        {/* Exemple de projet */}
-        <div className="webdev-card">
-          <h3>Projet 1</h3>
-          <p>Description courte du projet</p>
-        </div>
-        <div className="webdev-card">
-          <h3>Projet 2</h3>
-          <p>Description courte du projet</p>
+        {/* Projet Nohera */}
+        <div className="webdev-card webdev-card-featured">
+          <h3 className="webdev-card-title">{t("webdev.nohera.title")}</h3>
+          <p className="webdev-card-subtitle">{t("webdev.nohera.subtitle")}</p>
+          
+          <p className="webdev-card-description">
+            {t("webdev.nohera.description")}
+          </p>
+
+          <div className="webdev-features">
+            <h4 className="webdev-features-title">{t("webdev.nohera.features.title")}</h4>
+            <ul className="webdev-features-list">
+              <li>{t("webdev.nohera.features.library")}</li>
+              <li>{t("webdev.nohera.features.status")}</li>
+              <li>{t("webdev.nohera.features.search")}</li>
+              <li>{t("webdev.nohera.features.stats")}</li>
+              <li>{t("webdev.nohera.features.tabs")}</li>
+              <li>{t("webdev.nohera.features.persistence")}</li>
+            </ul>
+          </div>
+
+          <div className="webdev-tech">
+            <h4 className="webdev-tech-title">{t("webdev.nohera.tech.title")}</h4>
+            <p className="webdev-tech-stack">{t("webdev.nohera.tech.stack")}</p>
+          </div>
+
+          <div className="webdev-link-container">
+            <a
+              href="https://nohera-v2.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="webdev-link"
+            >
+              {t("webdev.nohera.linkText")}
+            </a>
+          </div>
         </div>
       </div>
 
