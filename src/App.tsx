@@ -1,6 +1,6 @@
 // src/App.tsx
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Landing from "./pages/Landing";
 import UniverseMenu from "./pages/UniverseMenu";
 import About from "./pages/About";
@@ -13,11 +13,27 @@ import ReseauxSociaux from "./pages/Infographie/ReseauxSociaux";
 import NotionsOutils from "./pages/Infographie/NotionsOutils";
 import WebDev from "./pages/WebDev";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import Navbar from "./components/Navbar";
+import ProgressIndicator from "./components/ProgressIndicator";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
+  const { pathname } = useLocation();
+  // Pas de barre de menu sur l'accueil, pour garder l'intro immersive
+  const isLanding = pathname === "/";
+
   return (
     <>
-      <LanguageSwitcher />
+      <ScrollToTop />
+      {isLanding ? (
+        <LanguageSwitcher />
+      ) : (
+        <>
+          <Navbar />
+          <ProgressIndicator />
+        </>
+      )}
+      <main className={isLanding ? undefined : "with-navbar"}>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/univers" element={<UniverseMenu />} />
@@ -31,6 +47,7 @@ export default function App() {
         <Route path="/infographie/notion" element={<NotionsOutils />} />
         <Route path="/web" element={<WebDev />} />
       </Routes>
+      </main>
     </>
   );
 }

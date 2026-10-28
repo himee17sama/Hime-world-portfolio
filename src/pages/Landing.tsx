@@ -10,6 +10,8 @@ export default function Landing() {
   const { t } = useLanguage();
   const [isExiting, setIsExiting] = React.useState(false);
   const [showContent, setShowContent] = React.useState(false);
+  const [isIntroDone, setIsIntroDone] = React.useState(false);
+  const [isSkipped, setIsSkipped] = React.useState(false);
 
   React.useEffect(() => {
     // Animation narrative : logo d'abord, puis contenu après 1s
@@ -17,8 +19,22 @@ export default function Landing() {
       setShowContent(true);
     }, 1000);
 
-    return () => clearTimeout(timer);
+    // Fin de l'intro : le bouton "Passer" n'est plus utile
+    const introTimer = setTimeout(() => {
+      setIsIntroDone(true);
+    }, 4500);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(introTimer);
+    };
   }, []);
+
+  const handleSkip = () => {
+    setIsSkipped(true);
+    setShowContent(true);
+    setIsIntroDone(true);
+  };
 
   const handleNavigate = () => {
     setIsExiting(true);
@@ -29,7 +45,12 @@ export default function Landing() {
   };
 
   return (
-    <div className={`landing-container ${isExiting ? 'exiting' : ''}`}>
+    <div className={`landing-container ${isExiting ? 'exiting' : ''} ${isSkipped ? 'skipped' : ''}`}>
+      {!isIntroDone && (
+        <button className="landing-skip" onClick={handleSkip}>
+          {t("landing.skip")} →
+        </button>
+      )}
       <div className={`landing-logo-container ${showContent ? 'logo-to-background' : 'logo-intro'}`}>
         <div className="landing-logo">H</div>
       </div>

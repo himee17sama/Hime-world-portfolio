@@ -1,40 +1,39 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./NotionsOutils.css";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function NotionsOutils() {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="notions-container">
-      <div className="notions-watermark">EN CONSTRUCTION</div>
-      <h1 className="notions-title">Notions & Outils Visuels</h1>
+      <h1 className="notions-title">{t("notionsPage.title")}</h1>
 
       <p className="notions-intro">
-        Ici je présente les compétences et outils que j’utilise pour mes projets graphiques et de design : logiciels de création, méthodologies UX/UI, gestion de projets créatifs et techniques.
+        {t("notionsPage.intro")}
       </p>
 
-      <div className="notions-projects">
-        <article className="notions-card">
-          <h2>Logiciels & Outils</h2>
-          <p>Adobe Photoshop, Illustrator, InDesign, Figma, Canva, Blender, Notion.</p>
-        </article>
-
-        <article className="notions-card">
-          <h2>Compétences UX/UI</h2>
-          <p>Wireframes, prototypage, design interactif, ergonomie et parcours utilisateur.</p>
-        </article>
-
-        <article className="notions-card">
-          <h2>Méthodologies</h2>
-          <p>Gestion de projet créatif, moodboards, brainstorming, test utilisateur et itérations.</p>
+      {/* PROJETS NOTION */}
+      <div className="notions-showcase">
+        <article className="notions-project">
+          <div className="notions-placeholder" aria-hidden="true">
+            <span>{t("notionsPage.placeholder")}</span>
+          </div>
+          <div className="notions-project-text">
+            <p className="notions-client">{t("notionsPage.internship.context")}</p>
+            <h2>{t("notionsPage.internship.title")}</h2>
+            <p>{t("notionsPage.internship.description")}</p>
+            <span className="notions-tag">{t("notionsPage.internship.tag")}</span>
+          </div>
         </article>
       </div>
 
       {/* Navigation */}
       <div className="notions-navigation">
         <button onClick={() => navigate("/infographie")}>
-          ← Retour Infographie
+          {t("common.backToInfographie")}
         </button>
       </div>
     </div>

@@ -1,0 +1,95 @@
+/* ============================================
+   INDICATEUR DE PARCOURS
+   ============================================ */
+
+.progress {
+  position: fixed;
+  top: 50%;
+  right: 1.5rem;
+  z-index: 900;
+  transform: translateY(-50%);
+}
+
+.progress-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+/* Ligne qui relie les étapes */
+.progress-list::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: 5px;
+  width: 2px;
+  background-color: rgba(125, 125, 125, 0.25);
+}
+
+.progress-step a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(125, 125, 125, 0.4);
+  background-color: var(--color-bg-alt);
+  transition: transform var(--transition-normal),
+              background-color var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+.progress-step.is-done .progress-dot {
+  border-color: var(--universe-color);
+  background-color: var(--universe-color);
+}
+
+.progress-step.is-current .progress-dot {
+  border-color: var(--universe-color);
+  background-color: var(--universe-color);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--universe-color) 35%, transparent);
+  transform: scale(1.25);
+}
+
+.progress-step a:hover .progress-dot {
+  transform: scale(1.25);
+}
+
+/* Nom de l'univers au survol */
+.progress-label {
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: var(--color-text-primary);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateX(6px);
+  pointer-events: none;
+  transition: opacity var(--transition-normal),
+              transform var(--transition-normal);
+}
+
+.progress-step a:hover .progress-label,
+.progress-step a:focus-visible .progress-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Sur mobile, le parcours s'affiche dans la barre (ex. 2 / 4) */
+@media (max-width: 768px) {
+  .progress {
+    display: none;
+  }
+}

@@ -4,105 +4,85 @@ import "./Illustrations.css";
 import nourIllustration from "../../assets/Nour.png";
 import indianaIllustration from "../../assets/indiana.jpg";
 import kourouIllustration from "../../assets/kourou.png";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function Illustrations() {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="illus-container">
-      <h1 className="illus-title">Illustrations & concepts</h1>
+      <h1 className="illus-title">{t("illusPage.title")}</h1>
 
       <p className="illus-intro">
-        Ici je partage mes illustrations, concepts graphiques et explorations visuelles
-        pour enrichir un univers ou une narration.
+        {t("illusPage.intro")}
       </p>
 
       <div className="illus-projects">
         {/* Projet 1 - Affiche DC */}
         <article className="illus-card">
-          <h2>Affiche de film DC</h2>
-          <p className="illus-client">Formation Doranco</p>
-          
+          <h2>{t("illusPage.dc.title")}</h2>
+          <p className="illus-client">{t("illusPage.dc.client")}</p>
+
           <div className="illus-image-container">
-            <img src={nourIllustration} alt="Affiche de film DC" className="illus-image" />
+            <img src={nourIllustration} alt={t("illusPage.dc.alt")} className="illus-image" />
           </div>
-          
+
           <p>
-            Pendant ma formation chez Doranco, j'ai suivi un module sur Photoshop où
-            nous avons réalisé une affiche de film mettant en scène un ou plusieurs
-            super-héros de l'univers DC. La consigne était de créer une affiche au
-            format A4 avec un titre de film choisi, en respectant la structure du template
-            d'affiche fourni. Nous devions nous assurer que tous les éléments de
-            l'affiche étaient en 300 dpi et qu'aucun faux texte (lorem ipsum) n'était utilisé.
+            {t("illusPage.dc.description1")}
           </p>
           <p style={{ marginTop: "1rem" }}>
-            Ce projet m'a permis de mettre en pratique mes compétences en design
-            graphique et en manipulation d'images à travers la création d'une affiche
-            attrayante et cohérente pour un film de super-héros DC.
+            {t("illusPage.dc.description2")}
           </p>
-          
-          <span className="illus-tag">Affiche • Photoshop • Design graphique</span>
+
+          <span className="illus-tag">{t("illusPage.dc.tag")}</span>
         </article>
 
         {/* Projet 2 - Affiche Indiana Jones */}
         <article className="illus-card">
-          <h2>Indiana Jones et le Monde Perdu</h2>
-          <p className="illus-client">Formation Doranco</p>
-          
+          <h2>{t("illusPage.indiana.title")}</h2>
+          <p className="illus-client">{t("illusPage.indiana.client")}</p>
+
           <div className="illus-image-container">
-            <img src={indianaIllustration} alt="Affiche Indiana Jones" className="illus-image" />
+            <img src={indianaIllustration} alt={t("illusPage.indiana.alt")} className="illus-image" />
           </div>
-          
+
           <p>
-            Pendant ma formation chez Doranco, j'ai eu l'opportunité de créer une affiche pour
-            la sortie d'un jeu vidéo intitulé "Indiana Jones et le Monde Perdu". La consigne
-            était de concevoir une affiche dans le style pulp, mettant en scène un décor de
-            jungle préhistorique avec au moins trois personnages : le héros, l'héroïne et
-            l'antagoniste. L'affiche devait inclure toutes les informations typiques d'un jeu
-            vidéo telles que le support, le studio de développement, etc.
+            {t("illusPage.indiana.description1")}
           </p>
           <p style={{ marginTop: "1rem" }}>
-            De plus, le logo Indiana Jones devait être légèrement retravaillé et vectorisé, tout comme le
-            titre du jeu. Ce projet impliquait la création d'un photomontage complexe,
-            comprenant la reconstitution des décors et la création des personnages, pour
-            capturer l'esprit aventureux du jeu.
+            {t("illusPage.indiana.description2")}
           </p>
-          
-          <span className="illus-tag">Affiche • Photomontage • Style pulp</span>
+
+          <span className="illus-tag">{t("illusPage.indiana.tag")}</span>
         </article>
 
         {/* Projet 3 - Pochette Kourou Carter */}
         <article className="illus-card">
-          <h2>Kourou Carter – Pochette d'album</h2>
-          <p className="illus-client">Stage full remote</p>
-          
+          <h2>{t("illusPage.kourou.title")}</h2>
+          <p className="illus-client">{t("illusPage.kourou.client")}</p>
+
           <div className="illus-image-container">
-            <img src={kourouIllustration} alt="Pochette album Kourou Carter" className="illus-image" />
+            <img src={kourouIllustration} alt={t("illusPage.kourou.alt")} className="illus-image" />
           </div>
-          
+
           <p>
-            Pendant mon stage en full remote, j'ai été chargé de concevoir la
-            pochette d'album de Kourou Carter pour une série de mixtapes
-            inspirées qui aspirent à transporter l'audience dans un voyage spatial,
-            avec des éléments sous-marins et spatiaux représentant l'univers
-            musical.
+            {t("illusPage.kourou.description1")}
           </p>
           <p style={{ marginTop: "1rem" }}>
-            Mon objectif principal était de saisir l'essence musicale de sa série
-            de mix à travers la conception de la pochette de l'album.
+            {t("illusPage.kourou.description2")}
           </p>
-          
-          <span className="illus-tag">Pochette d'album • Design • Mixtape</span>
+
+          <span className="illus-tag">{t("illusPage.kourou.tag")}</span>
         </article>
       </div>
 
       {/* Navigation */}
       <div className="illus-navigation">
         <button onClick={() => navigate("/infographie")}>
-          ← Retour Infographie
+          {t("common.backToInfographie")}
         </button>
       </div>
     </div>
   );
 }
-

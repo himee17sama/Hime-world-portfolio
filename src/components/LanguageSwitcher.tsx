@@ -3,12 +3,13 @@ import React from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import "./LanguageSwitcher.css";
 
-export default function LanguageSwitcher() {
+// inline : intégré dans la barre de menu au lieu de flotter en haut à droite
+export default function LanguageSwitcher({ inline = false }: { inline?: boolean }) {
   try {
     const { language, setLanguage } = useLanguage();
 
     return (
-      <div className="language-switcher">
+      <div className={`language-switcher ${inline ? "language-switcher--inline" : ""}`}>
         <button
           className={`lang-btn ${language === "fr" ? "active" : ""}`}
           onClick={() => setLanguage("fr")}

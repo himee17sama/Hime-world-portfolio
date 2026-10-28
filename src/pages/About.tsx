@@ -72,6 +72,25 @@ export default function About() {
         ))}
       </div>
 
+      {/* OUTILS & MÉTHODES */}
+      <section className="about-skills">
+        <h2 className="about-skills-title">{t("about.skills.title")}</h2>
+        <div className="about-skills-grid">
+          <article className="about-skill-card">
+            <h3>{t("about.skills.softwareTitle")}</h3>
+            <p>{t("about.skills.software")}</p>
+          </article>
+          <article className="about-skill-card">
+            <h3>{t("about.skills.uxTitle")}</h3>
+            <p>{t("about.skills.ux")}</p>
+          </article>
+          <article className="about-skill-card">
+            <h3>{t("about.skills.methodsTitle")}</h3>
+            <p>{t("about.skills.methods")}</p>
+          </article>
+        </div>
+      </section>
+
       {/* LIENS SOCIAUX */}
       <div className="about-social">
         <SocialLinks />
