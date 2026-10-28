@@ -5,7 +5,20 @@ export const translations = {
     landing: {
       title: "Bienvenue dans mon monde",
       subtitle: "Hime's portfolio",
-      enter: "Entrer"
+      enter: "Entrer",
+      skip: "Passer"
+    },
+    // Barre de menu
+    nav: {
+      home: "Retour au choix des univers",
+      main: "Navigation principale",
+      menu: "Menu",
+      close: "Fermer le menu",
+      progress: "Parcours",
+      about: "Qui suis-je ?",
+      btp: "BTP",
+      infographie: "Infographie",
+      web: "Web"
     },
     // Universe Menu
     universe: {
@@ -50,6 +63,15 @@ export const translations = {
           title: "Titre Professionnel Conducteur de Travaux",
           description: "Niveau Bac+2, réalisé en alternance dans une entreprise de second œuvre. J'y ai également créé un logiciel VBA pour la gestion de l'outillage et quincaillerie."
         }
+      },
+      skills: {
+        title: "Outils & méthodes",
+        softwareTitle: "Logiciels & Outils",
+        software: "Adobe Photoshop, Illustrator, InDesign, Figma, Canva, Blender, Notion.",
+        uxTitle: "Compétences UX/UI",
+        ux: "Wireframes, prototypage, design interactif, ergonomie et parcours utilisateur.",
+        methodsTitle: "Méthodologies",
+        methods: "Gestion de projet créatif, moodboards, brainstorming, test utilisateur et itérations."
       },
       back: "Retour",
       next: "Section suivante →"
@@ -110,7 +132,123 @@ export const translations = {
         link: "Visiter l'application",
         linkText: "Voir Nohera en ligne →"
       },
+      codequest: {
+        title: "Code Quest",
+        subtitle: "Apprendre à coder à travers une aventure fantasy",
+        description: "Code Quest est une application web d'apprentissage du HTML, du CSS et du JavaScript pour débutants. L'élève restaure le royaume de Lumenor, mission après mission. Chaque mission suit la même boucle pédagogique : récit, leçon, démonstration, jeux guidés, puis défi autonome.",
+        imageAlt: "Carte du royaume de Lumenor dans Code Quest",
+        features: {
+          title: "Fonctionnalités principales",
+          missions: "8 missions et 87 étapes : récits, leçons, démonstrations, prédictions, jeux et exercices de code",
+          validation: "Validation réelle du code : analyse du HTML et du CSS, exécution du JavaScript sur plusieurs situations",
+          security: "Exécution sécurisée dans un Web Worker et un iframe isolé, sans eval()",
+          hints: "Indices progressifs et solution consultable après 3 essais",
+          grimoire: "Grimoire de 28 fiches de révision et Laboratoire d'expérimentation libre",
+          progress: "Progression avec XP, niveaux et badges, sauvegardée dans le navigateur"
+        },
+        tech: {
+          title: "Technologies utilisées",
+          stack: "React 19, TypeScript, Vite, React Router, Web Workers, Vitest (99 tests)"
+        },
+        linkText: "Voir Code Quest en ligne →"
+      },
       back: "Retour"
+    },
+    // Sous-pages Infographie
+    identitesPage: {
+      title: "Identités visuelles",
+      intro: "Une identité visuelle ne se limite pas à un logo. C’est une cohérence globale : formes, couleurs, typographies et intentions. J’aime concevoir des univers qui ont du sens et qui racontent une histoire.",
+      paletteTitle: "Palette de couleurs",
+      mtd: {
+        title: "MTD Transport",
+        client: "Entreprise sénégalaise de transport",
+        altMain: "MTD Logo principal",
+        altWomen: "MTD Logo courses féminines",
+        altEvents: "MTD Logo événements",
+        description1: "Création d'une identité visuelle distinctive pour renforcer l'image de marque. Conception de trois logos adaptés à différents contextes : logo principal, logo pour courses féminines, et logo pour événements spéciaux.",
+        description2: "Réalisation du logo sur Illustrator, création des cartes de visite, et production de maquettes (mockups) avec Photoshop et InDesign.",
+        tag: "Logo • Carte de visite • Charte graphique • Mockups"
+      },
+      akom: {
+        title: "Boutique de cosmétique",
+        client: "Entreprise sénégalaise de cosmétique",
+        alt: "Logo boutique de cosmétique",
+        description1: "Conception d'un logo intégrant les couleurs doré et vert, mettant en avant la première lettre avec une transition fluide entre le visage dessiné et la lettre.",
+        description2: "Définition complète de la charte graphique pour créer une identité visuelle distinctive et cohérente, en accord avec l'esthétique et les valeurs de l'entreprise.",
+        tag: "Logo • Charte graphique"
+      }
+    },
+    misesPage: {
+      title: "Mises en page",
+      intro: "Ici je partage mes réalisations en mise en page : magazines, plaquettes, rapports ou supports print et digitaux. Chaque projet reflète l’équilibre entre esthétique et lisibilité.",
+      gaia: {
+        title: "Odyssée Immobilier – Magazine rétrospectif",
+        client: "Projet GAIA, écoquartier de Rouen",
+        alt: "Couverture magazine GAIA",
+        description: "Pour Odyssée Immobilier, j'ai conçu un magazine rétrospectif présentant l'avancement de l'écoquartier GAIA à Rouen. En utilisant InDesign, j'ai créé un flipbook interactif, combinant des photos du chantier et les étapes clés. Inspirée par des plateformes comme Behance et des magazines comme Time, j'ai veillé à une mise en page claire et engageante. Le magazine final a été publié en ligne, renforçant la transparence et la confiance des acquéreurs.",
+        linkOnline: "Voir le magazine en ligne →",
+        linkPdf: "Télécharger le PDF →",
+        tag: "Magazine • InDesign • Flipbook • Digital"
+      },
+      alca: {
+        title: "ALCA Décor – Plaquette entreprise",
+        client: "Entreprise de construction, Toulon",
+        alt: "Plaquette ALCA Décor",
+        description: "J'ai eu l'opportunité de refaire la plaquette de présentation d'une entreprise de construction basée à Toulon, nommée ALCA Décor, spécialisée dans le second œuvre. En ayant accès à l'ancienne version, j'ai conçu une nouvelle plaquette plus moderne qui met en valeur de manière optimale les activités de l'entreprise.",
+        tag: "Plaquette • Print • Refonte"
+      },
+      next: "Identités visuelles →"
+    },
+    illusPage: {
+      title: "Illustrations & concepts",
+      intro: "Ici je partage mes illustrations, concepts graphiques et explorations visuelles pour enrichir un univers ou une narration.",
+      dc: {
+        title: "Affiche de film DC",
+        client: "Formation Doranco",
+        alt: "Affiche de film DC",
+        description1: "Pendant ma formation chez Doranco, j'ai suivi un module sur Photoshop où nous avons réalisé une affiche de film mettant en scène un ou plusieurs super-héros de l'univers DC. La consigne était de créer une affiche au format A4 avec un titre de film choisi, en respectant la structure du template d'affiche fourni. Nous devions nous assurer que tous les éléments de l'affiche étaient en 300 dpi et qu'aucun faux texte (lorem ipsum) n'était utilisé.",
+        description2: "Ce projet m'a permis de mettre en pratique mes compétences en design graphique et en manipulation d'images à travers la création d'une affiche attrayante et cohérente pour un film de super-héros DC.",
+        tag: "Affiche • Photoshop • Design graphique"
+      },
+      indiana: {
+        title: "Indiana Jones et le Monde Perdu",
+        client: "Formation Doranco",
+        alt: "Affiche Indiana Jones",
+        description1: "Pendant ma formation chez Doranco, j'ai eu l'opportunité de créer une affiche pour la sortie d'un jeu vidéo intitulé \"Indiana Jones et le Monde Perdu\". La consigne était de concevoir une affiche dans le style pulp, mettant en scène un décor de jungle préhistorique avec au moins trois personnages : le héros, l'héroïne et l'antagoniste. L'affiche devait inclure toutes les informations typiques d'un jeu vidéo telles que le support, le studio de développement, etc.",
+        description2: "De plus, le logo Indiana Jones devait être légèrement retravaillé et vectorisé, tout comme le titre du jeu. Ce projet impliquait la création d'un photomontage complexe, comprenant la reconstitution des décors et la création des personnages, pour capturer l'esprit aventureux du jeu.",
+        tag: "Affiche • Photomontage • Style pulp"
+      },
+      kourou: {
+        title: "Kourou Carter – Pochette d'album",
+        client: "Stage full remote",
+        alt: "Pochette album Kourou Carter",
+        description1: "Pendant mon stage en full remote, j'ai été chargé de concevoir la pochette d'album de Kourou Carter pour une série de mixtapes inspirées qui aspirent à transporter l'audience dans un voyage spatial, avec des éléments sous-marins et spatiaux représentant l'univers musical.",
+        description2: "Mon objectif principal était de saisir l'essence musicale de sa série de mix à travers la conception de la pochette de l'album.",
+        tag: "Pochette d'album • Design • Mixtape"
+      }
+    },
+    socialPage: {
+      title: "Conceptions visuelles pour réseaux sociaux",
+      intro: "Ici je partage mes créations graphiques adaptées aux réseaux sociaux : visuels, posts, stories et concepts interactifs pour Instagram, LinkedIn, et autres plateformes.",
+      agency: {
+        title: "Gestion de réseaux sociaux – Agence de communication",
+        client: "Agence de communication et marketing",
+        description: "Au sein d'une agence de communication et de marketing, j'ai été chargée de produire du contenu captivant pour diverses plateformes numériques telles que des articles de blog, des vidéos, des infographies, etc. Ma principale mission consistait à gérer les publications sur les pages Instagram et LinkedIn de l'entreprise. Mon objectif était d'attirer de nouveaux clients tout en présentant les missions, la vision de l'entreprise et en mettant en valeur son savoir-faire.",
+        postAlt: "Post réseaux sociaux",
+        tag: "Instagram • LinkedIn • Contenu digital • Community management"
+      },
+      next: "Mises en page →"
+    },
+    notionsPage: {
+      title: "Notion & outils visuels",
+      intro: "Organiser l'information, c'est aussi du design. Ici je présente les bases de données, tableaux de bord et outils de suivi que je conçois pour rendre un projet lisible.",
+      placeholder: "Captures à venir",
+      internship: {
+        context: "Stage · 2 mois",
+        title: "Graphiste no-code / low-code sur Notion",
+        description: "Pendant mon stage, j'ai conçu et géré des bases de données sur Notion, en pensant leur structure et leur présentation pour que l'information soit claire et facile à retrouver.",
+        tag: "Notion • Bases de données • No-code"
+      }
     },
     // Common
     common: {
@@ -125,7 +263,20 @@ export const translations = {
     landing: {
       title: "Welcome to my world",
       subtitle: "Hime's portfolio",
-      enter: "Enter"
+      enter: "Enter",
+      skip: "Skip"
+    },
+    // Navigation bar
+    nav: {
+      home: "Back to universe selection",
+      main: "Main navigation",
+      menu: "Menu",
+      close: "Close menu",
+      progress: "Journey",
+      about: "About",
+      btp: "Construction",
+      infographie: "Design",
+      web: "Web"
     },
     // Universe Menu
     universe: {
@@ -170,6 +321,15 @@ export const translations = {
           title: "Professional Title: Site Manager",
           description: "Bac+2 level, completed through apprenticeship in a finishing work company. I also created a VBA software for tool and hardware management."
         }
+      },
+      skills: {
+        title: "Tools & methods",
+        softwareTitle: "Software & Tools",
+        software: "Adobe Photoshop, Illustrator, InDesign, Figma, Canva, Blender, Notion.",
+        uxTitle: "UX/UI skills",
+        ux: "Wireframes, prototyping, interaction design, usability and user journeys.",
+        methodsTitle: "Methodologies",
+        methods: "Creative project management, moodboards, brainstorming, user testing and iterations."
       },
       back: "Back",
       next: "Next section →"
@@ -230,7 +390,123 @@ export const translations = {
         link: "Visit the application",
         linkText: "View Nohera online →"
       },
+      codequest: {
+        title: "Code Quest",
+        subtitle: "Learning to code through a fantasy adventure",
+        description: "Code Quest is a web application that teaches HTML, CSS and JavaScript to beginners. The learner restores the kingdom of Lumenor, one mission at a time. Every mission follows the same learning loop: story, lesson, demonstration, guided games, then an independent challenge.",
+        imageAlt: "Map of the kingdom of Lumenor in Code Quest",
+        features: {
+          title: "Main features",
+          missions: "8 missions and 87 steps: stories, lessons, demonstrations, predictions, games and coding exercises",
+          validation: "Real code validation: HTML and CSS parsing, JavaScript run against several scenarios",
+          security: "Secure execution in a Web Worker and a sandboxed iframe, without eval()",
+          hints: "Progressive hints, with the solution available after 3 attempts",
+          grimoire: "A Grimoire of 28 revision cards and a free experimentation Laboratory",
+          progress: "Progression with XP, levels and badges, saved in the browser"
+        },
+        tech: {
+          title: "Technologies used",
+          stack: "React 19, TypeScript, Vite, React Router, Web Workers, Vitest (99 tests)"
+        },
+        linkText: "View Code Quest online →"
+      },
       back: "Back"
+    },
+    // Graphic design sub-pages
+    identitesPage: {
+      title: "Visual identities",
+      intro: "A visual identity is more than a logo. It's a global coherence: shapes, colors, typography and intentions. I love designing universes that make sense and tell a story.",
+      paletteTitle: "Color palette",
+      mtd: {
+        title: "MTD Transport",
+        client: "Senegalese transport company",
+        altMain: "MTD main logo",
+        altWomen: "MTD women's rides logo",
+        altEvents: "MTD events logo",
+        description1: "Creation of a distinctive visual identity to strengthen the brand image. Design of three logos adapted to different contexts: a main logo, a logo for women's rides, and a logo for special events.",
+        description2: "Logo designed in Illustrator, creation of business cards, and production of mockups with Photoshop and InDesign.",
+        tag: "Logo • Business card • Brand guidelines • Mockups"
+      },
+      akom: {
+        title: "Cosmetics shop",
+        client: "Senegalese cosmetics company",
+        alt: "Cosmetics shop logo",
+        description1: "Design of a logo combining gold and green, highlighting the first letter with a smooth transition between the drawn face and the letter.",
+        description2: "Full definition of the brand guidelines to create a distinctive and coherent visual identity, in line with the company's aesthetics and values.",
+        tag: "Logo • Brand guidelines"
+      }
+    },
+    misesPage: {
+      title: "Layouts",
+      intro: "Here I share my layout work: magazines, brochures, reports and print or digital materials. Each project reflects the balance between aesthetics and readability.",
+      gaia: {
+        title: "Odyssée Immobilier – Retrospective magazine",
+        client: "GAIA project, eco-district in Rouen",
+        alt: "GAIA magazine cover",
+        description: "For Odyssée Immobilier, I designed a retrospective magazine presenting the progress of the GAIA eco-district in Rouen. Using InDesign, I created an interactive flipbook combining construction site photos and key milestones. Inspired by platforms like Behance and magazines like Time, I made sure the layout was clear and engaging. The final magazine was published online, strengthening transparency and buyers' trust.",
+        linkOnline: "View the magazine online →",
+        linkPdf: "Download the PDF →",
+        tag: "Magazine • InDesign • Flipbook • Digital"
+      },
+      alca: {
+        title: "ALCA Décor – Company brochure",
+        client: "Construction company, Toulon",
+        alt: "ALCA Décor brochure",
+        description: "I had the opportunity to redesign the presentation brochure of a Toulon-based construction company called ALCA Décor, specialized in finishing works. With access to the previous version, I designed a new, more modern brochure that showcases the company's activities in the best possible way.",
+        tag: "Brochure • Print • Redesign"
+      },
+      next: "Visual identities →"
+    },
+    illusPage: {
+      title: "Illustrations & concepts",
+      intro: "Here I share my illustrations, graphic concepts and visual explorations to enrich a universe or a narrative.",
+      dc: {
+        title: "DC movie poster",
+        client: "Doranco training",
+        alt: "DC movie poster",
+        description1: "During my training at Doranco, I took a Photoshop module in which we created a movie poster featuring one or more superheroes from the DC universe. The brief was to create an A4 poster with a chosen movie title, following the structure of the provided poster template. We had to make sure every element of the poster was 300 dpi and that no placeholder text (lorem ipsum) was used.",
+        description2: "This project allowed me to put my graphic design and image editing skills into practice by creating an attractive and coherent poster for a DC superhero movie.",
+        tag: "Poster • Photoshop • Graphic design"
+      },
+      indiana: {
+        title: "Indiana Jones and the Lost World",
+        client: "Doranco training",
+        alt: "Indiana Jones poster",
+        description1: "During my training at Doranco, I had the opportunity to create a poster for the release of a video game called \"Indiana Jones and the Lost World\". The brief was to design a pulp-style poster featuring a prehistoric jungle setting with at least three characters: the hero, the heroine and the antagonist. The poster had to include all the typical information of a video game, such as the platform, the development studio, etc.",
+        description2: "In addition, the Indiana Jones logo had to be slightly reworked and vectorized, as did the game title. This project involved creating a complex photomontage, including rebuilding the scenery and creating the characters, to capture the adventurous spirit of the game.",
+        tag: "Poster • Photomontage • Pulp style"
+      },
+      kourou: {
+        title: "Kourou Carter – Album cover",
+        client: "Fully remote internship",
+        alt: "Kourou Carter album cover",
+        description1: "During my fully remote internship, I was in charge of designing Kourou Carter's album cover for a series of inspired mixtapes that aim to take the audience on a space journey, with underwater and space elements representing the musical universe.",
+        description2: "My main goal was to capture the musical essence of the mix series through the album cover design.",
+        tag: "Album cover • Design • Mixtape"
+      }
+    },
+    socialPage: {
+      title: "Visual designs for social media",
+      intro: "Here I share my graphic creations adapted to social media: visuals, posts, stories and interactive concepts for Instagram, LinkedIn and other platforms.",
+      agency: {
+        title: "Social media management – Communication agency",
+        client: "Communication and marketing agency",
+        description: "At a communication and marketing agency, I was in charge of producing engaging content for various digital platforms such as blog articles, videos, infographics, etc. My main mission was to manage the posts on the company's Instagram and LinkedIn pages. My goal was to attract new clients while presenting the company's missions and vision and showcasing its expertise.",
+        postAlt: "Social media post",
+        tag: "Instagram • LinkedIn • Digital content • Community management"
+      },
+      next: "Layouts →"
+    },
+    notionsPage: {
+      title: "Notion & visual tools",
+      intro: "Organizing information is design too. Here I present the databases, dashboards and tracking tools I design to make a project easy to read.",
+      placeholder: "Screenshots coming soon",
+      internship: {
+        context: "Internship · 2 months",
+        title: "No-code / low-code designer on Notion",
+        description: "During my internship, I designed and managed databases in Notion, thinking through their structure and presentation so that information is clear and easy to find.",
+        tag: "Notion • Databases • No-code"
+      }
     },
     // Common
     common: {

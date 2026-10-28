@@ -4,85 +4,79 @@ import "./MisesEnPage.css";
 import alcaPlaquette from "../../assets/alca.png";
 import gaiaCover from "../../assets/gaiamagazine.jpg";
 import gaiaPdf from "../../assets/GAIA RETRO.pdf";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function MisesEnPage() {
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   return (
     <div className="mises-container">
-      <h1 className="mises-title">Mises en page</h1>
+      <h1 className="mises-title">{t("misesPage.title")}</h1>
 
       <p className="mises-intro">
-        Ici je partage mes réalisations en mise en page : magazines, plaquettes, rapports ou supports print et digitaux.  
-        Chaque projet reflète l’équilibre entre esthétique et lisibilité.
+        {t("misesPage.intro")}
       </p>
 
       <div className="mises-projects">
         {/* Projet 1 - Magazine Odyssée Immobilier */}
         <article className="mises-card">
-          <h2>Odyssée Immobilier – Magazine rétrospectif</h2>
-          <p className="mises-client">Projet GAIA, écoquartier de Rouen</p>
-          
+          <h2>{t("misesPage.gaia.title")}</h2>
+          <p className="mises-client">{t("misesPage.gaia.client")}</p>
+
           <div className="mises-image-container">
-            <img src={gaiaCover} alt="Couverture magazine GAIA" className="mises-image" />
+            <img src={gaiaCover} alt={t("misesPage.gaia.alt")} className="mises-image" />
           </div>
-          
+
           <p>
-            Pour Odyssée Immobilier, j'ai conçu un magazine rétrospectif présentant l'avancement 
-            de l'écoquartier GAIA à Rouen. En utilisant InDesign, j'ai créé un flipbook interactif, 
-            combinant des photos du chantier et les étapes clés. Inspirée par des plateformes comme 
-            Behance et des magazines comme Time, j'ai veillé à une mise en page claire et engageante. 
-            Le magazine final a été publié en ligne, renforçant la transparence et la confiance des acquéreurs.
+            {t("misesPage.gaia.description")}
           </p>
-          
+
           <div className="mises-links-container">
-            <a 
-              href="https://online.fliphtml5.com/behjm/klvq/#p=1" 
-              target="_blank" 
+            <a
+              href="https://online.fliphtml5.com/behjm/klvq/#p=1"
+              target="_blank"
               rel="noopener noreferrer"
               className="mises-link"
             >
-              Voir le magazine en ligne →
+              {t("misesPage.gaia.linkOnline")}
             </a>
-            <a 
-              href={gaiaPdf} 
-              target="_blank" 
+            <a
+              href={gaiaPdf}
+              target="_blank"
               rel="noopener noreferrer"
               className="mises-link mises-link-pdf"
             >
-              Télécharger le PDF →
+              {t("misesPage.gaia.linkPdf")}
             </a>
           </div>
-          
-          <span className="mises-tag">Magazine • InDesign • Flipbook • Digital</span>
+
+          <span className="mises-tag">{t("misesPage.gaia.tag")}</span>
         </article>
 
         {/* Projet 2 - ALCA Décor */}
         <article className="mises-card">
-          <h2>ALCA Décor – Plaquette entreprise</h2>
-          <p className="mises-client">Entreprise de construction, Toulon</p>
-          
+          <h2>{t("misesPage.alca.title")}</h2>
+          <p className="mises-client">{t("misesPage.alca.client")}</p>
+
           <div className="mises-image-container">
-            <img src={alcaPlaquette} alt="Plaquette ALCA Décor" className="mises-image" />
+            <img src={alcaPlaquette} alt={t("misesPage.alca.alt")} className="mises-image" />
           </div>
-          
+
           <p>
-            J'ai eu l'opportunité de refaire la plaquette de présentation d'une entreprise de construction
-            basée à Toulon, nommée ALCA Décor, spécialisée dans le second œuvre. En ayant accès à l'ancienne
-            version, j'ai conçu une nouvelle plaquette plus moderne qui met en valeur de manière optimale
-            les activités de l'entreprise.
+            {t("misesPage.alca.description")}
           </p>
-          <span className="mises-tag">Plaquette • Print • Refonte</span>
+          <span className="mises-tag">{t("misesPage.alca.tag")}</span>
         </article>
       </div>
 
       {/* Navigation */}
       <div className="mises-navigation">
         <button onClick={() => navigate("/infographie")}>
-          ← Retour Infographie
+          {t("common.backToInfographie")}
         </button>
         <button onClick={() => navigate("/infographie/identites")}>
-          Identités visuelles →
+          {t("misesPage.next")}
         </button>
       </div>
     </div>

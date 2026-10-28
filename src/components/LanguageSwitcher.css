@@ -41,6 +41,21 @@
   font-weight: 600;
 }
 
+/* Version intégrée dans la barre de menu */
+.language-switcher--inline {
+  position: static;
+  padding: 0.25rem;
+  box-shadow: none;
+}
+
+.language-switcher--inline .lang-btn {
+  padding: 0.35rem 0.8rem;
+}
+
+.lang-btn:hover {
+  transform: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .language-switcher {

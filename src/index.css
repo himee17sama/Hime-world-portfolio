@@ -24,6 +24,9 @@
   --transition-slow: 0.6s ease;
   --transition-normal: 0.3s ease;
   --transition-fast: 0.2s ease;
+
+  /* Barre de menu */
+  --navbar-height: 64px;
 }
 
 /* Reset & Base */
@@ -46,6 +49,11 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+/* Laisse la place à la barre de menu fixe en haut de chaque page */
+main.with-navbar > * {
+  padding-top: calc(var(--navbar-height) + 2rem);
 }
 
 /* Typographie */

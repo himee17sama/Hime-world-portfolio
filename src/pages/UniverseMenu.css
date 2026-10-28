@@ -54,55 +54,95 @@
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.menu-buttons {
+/* Cartes des univers, façon vignettes */
+.menu-cards {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   width: 100%;
-  max-width: 400px;
-  align-items: center;
+  max-width: 1100px;
 }
 
-.menu-buttons button {
-  width: 100%;
-  max-width: 350px;
-  padding: 16px 32px;
-  font-size: 18px;
-  border-radius: 50px;
-  background-color: var(--color-accent-primary);
-  color: var(--color-text-primary);
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  border-bottom: 3px solid var(--universe-color);
+  background-color: #2A2424;
+  text-decoration: none;
   transition: transform var(--transition-normal),
-              background-color var(--transition-normal),
               box-shadow var(--transition-normal);
   animation: fadeInUp 0.8s ease-out both;
 }
 
-.menu-buttons button:nth-child(1) {
-  animation-delay: 0.3s;
-}
-
-.menu-buttons button:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.menu-buttons button:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.menu-buttons button:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.menu-buttons button:hover {
+.menu-card:hover,
+.menu-card:focus-visible {
   transform: scale(1.05);
-  background-color: var(--color-accent-secondary);
-  box-shadow: 0 4px 20px rgba(244, 199, 195, 0.3);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--universe-color) 40%, transparent);
 }
 
-.menu-buttons button:active {
-  transform: scale(0.98);
+.menu-card:focus-visible {
+  outline: 2px solid var(--universe-color);
+  outline-offset: 3px;
+}
+
+.menu-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.08);
+}
+
+.menu-card--about .menu-card-image {
+  background-color: #FFFFFF;
+}
+
+/* On cadre sur les bâtiments de la couverture GAIA */
+.menu-card--btp .menu-card-image img {
+  object-position: center 75%;
+}
+
+.menu-card--infographie .menu-card-image {
+  background-color: #3B2B41;
+}
+
+.menu-card--infographie .menu-card-image img {
+  object-fit: contain;
+}
+
+.menu-card--web .menu-card-image {
+  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
+}
+
+.menu-card-code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--color-text-primary);
+}
+
+.menu-card-label {
+  padding: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--color-bg-light);
+  text-align: center;
 }
 
 /* Liens sociaux */
@@ -124,18 +164,20 @@
 }
 
 /* Responsive */
+@media (max-width: 960px) {
+  .menu-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-container {
     padding: 2rem 1.5rem;
   }
   
-  .menu-buttons {
-    gap: 1.2rem;
-  }
-  
-  .menu-buttons button {
-    padding: 14px 28px;
-    font-size: 16px;
+  .menu-cards {
+    gap: 1rem;
   }
 
   .menu-container .social-links {
@@ -143,3 +185,13 @@
   }
 }
 
+@media (max-width: 480px) {
+  .menu-cards {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+
+  .menu-card-image {
+    aspect-ratio: 16 / 8;
+  }
+}
